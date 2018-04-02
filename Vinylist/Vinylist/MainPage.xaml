@@ -8,6 +8,64 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="311*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="119*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ============    HEADER         =============-->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="top" Margin="83.667,0,132,0" Grid.Column="1">
+            <TextBlock Text="Vinylist" FontSize="30" />
+        </StackPanel>
+
+        <!-- ============    HAMBURGER MENU         =============-->
+        <SplitView x:Name="Hb_menu"  IsPaneOpen="False" DisplayMode="CompactOverlay" CompactPaneLength="50" OpenPaneLength="250" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+
+                    <Button x:Name="HamburgerButton" FontSize="30" FontFamily="Segoe MDL2 Assets" Content="" Click="HamburgerButton_Click" Background="{x:Null}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu1btn" Click="menu1btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/> 
+                        <TextBlock Text="Collection" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu2btn" Click="menu2btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
+                        <TextBlock Text="Wantlist" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu3btn" Click="menu3btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
+                        <TextBlock Text="About" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu4btn" Click="menu4btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
+                        <TextBlock Text="Contact" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+
+        <!-- ===================   ADD TO COLLECTION            ============================ -->
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
+            <RelativePanel>
+                <TextBox x:Name="collectionTextbox" PlaceholderText="Add To Collection..." TextChanged="collectionTextbox_TextChanged"/>
+                <Button  x:Name="collectionButton"  Click="collectionButton_Click" Content="Add" RelativePanel.RightOf="collectionTextbox"/>
+            </RelativePanel>
+        </StackPanel>
+
+        <!-- ===================   ADD TO WANTLIST            ============================ -->
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Margin="0,50,0,0">
+            <RelativePanel>
+                <TextBox x:Name="wantlistTextbox" PlaceholderText="Add To Wantlist..." TextChanged="wantlistTextbox_TextChanged"/>
+                <Button  x:Name="wantlistButton"  Click="wantlistButton_Click" Content="Add" RelativePanel.RightOf="wantlistTextbox"/>
+            </RelativePanel>
+        </StackPanel>
+
 
     </Grid>
 </Page>

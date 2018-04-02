@@ -26,5 +26,58 @@ namespace Vinylist
         {
             this.InitializeComponent();
         }
+
+        // Hamburger Menu
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hb_menu.IsPaneOpen = true;
+        }
+
+        //Navigation Collection
+        private void collectionButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.collection), collectionTextbox.Text);
+        }
+
+        private void collectionTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        //navigation wantlist
+
+        private void wantlistButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.wantlist), wantlistTextbox.Text);
+        }
+
+        private void wantlistTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        //from hamburger to collection button
+        private void menu1btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.collection), collectionTextbox.Text);
+        }
+
+        //from hamburger to wantlist button
+        private void menu2btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.wantlist), collectionTextbox.Text);
+        }
+
+        //from hamburger to about button
+        private void menu3btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.about));
+        }
+
+        //from hamburger to contact button
+        private void menu4btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.contact));
+        }
     }
 }
