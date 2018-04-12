@@ -29,9 +29,9 @@
 
                     <Button x:Name="HamburgerButton" Opacity="1" FontSize="30" FontFamily="Segoe MDL2 Assets" Content="" Click="HamburgerButton_Click" Background="{x:Null}"/>
                     <StackPanel Orientation="Horizontal">
-                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu1btn" Click="menu1btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/> 
+                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu1btn" Click="menu1btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
                         <TextBlock Text="Collection" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
-                    </StackPanel> 
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button FontSize="20" Margin="5,0,0,0" x:Name="menu2btn" Click="menu2btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
                         <TextBlock Text="Wantlist" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
@@ -47,15 +47,13 @@
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
-
         <!-- ===================   ADD TO COLLECTION            ============================ -->
-
-         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
             <RelativePanel>
                 <TextBox x:Name="collectionTextbox" PlaceholderText="Add To Collection..." TextChanged="collectionTextbox_TextChanged"/>
                 <Button  x:Name="collectionButton"  Click="collectionButton_Click" Content="Add" RelativePanel.RightOf="collectionTextbox"/>
             </RelativePanel>
-        </StackPanel> 
+        </StackPanel>
 
         <!-- ===================   ADD TO WANTLIST            ============================ -->
 
@@ -65,13 +63,13 @@
                 <Button  x:Name="wantlistButton"  Click="wantlistButton_Click" Content="Add" RelativePanel.RightOf="wantlistTextbox"/>
             </RelativePanel>
         </StackPanel>
-        
+
         <!-- ========================================================= 
 
      
 
          ========================================================== -->
-    
+
 
     </Grid>
 </Page>
