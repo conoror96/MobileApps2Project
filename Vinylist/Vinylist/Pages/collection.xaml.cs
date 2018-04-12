@@ -29,10 +29,10 @@ namespace Vinylist.Pages
 
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+       /* protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             collectionlabel.Text = e.Parameter.ToString() + "Added to Collection!";
-        }
+        } */
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {

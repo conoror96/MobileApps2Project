@@ -34,6 +34,7 @@ namespace Vinylist.Pages
         // ========================ADD DATA==================================
         private void AddDataWantlist(object sender, RoutedEventArgs e)
         {
+            DataAccess.AddDataWantlist("=========================");
             DataAccess.AddDataWantlist("ARTIST:   " + Artist.Text);
             DataAccess.AddDataWantlist("ALBUM:    " + Album.Text);
 
@@ -41,12 +42,8 @@ namespace Vinylist.Pages
         }
         // ===================END OF ADD DATA==================================
 
-        // on navigate to --- delete later
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            wantlistlabel.Text = e.Parameter.ToString() + "Added to Wantlist!";
-        }
-
+      
+        
         // =====================BACK BUTTON=========================
         private void backButton_Click(object sender, RoutedEventArgs e)
         {

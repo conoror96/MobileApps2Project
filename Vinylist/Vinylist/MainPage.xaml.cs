@@ -37,13 +37,13 @@ namespace Vinylist
         }
 
         // Hamburger Menu
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+      /*  private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             Hb_menu.IsPaneOpen = true;
-        }
+        } */
 
         //Navigation Collection from main page
-        private void collectionButton_Click(object sender, RoutedEventArgs e)
+      /*  private void collectionButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Pages.collection), collectionTextbox.Text);
         }
@@ -63,25 +63,25 @@ namespace Vinylist
         private void wantlistTextbox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-        }
+        } */
 
         //from hamburger to collection button
         private void menu1btn_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.collection), collectionTextbox.Text);
+            this.Frame.Navigate(typeof(Pages.collection));
         }
 
         //from hamburger to wantlist button
-        private void menu2btn_Click(object sender, RoutedEventArgs e)
+         private void menu2btn_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.wantlist), wantlistTextbox.Text);
+            this.Frame.Navigate(typeof(Pages.wantlist));
         }
 
         //from hamburger to about button
         private void menu3btn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Pages.about));
-        }
+        } 
 
         //from hamburger to contact button
         private void menu4btn_Click(object sender, RoutedEventArgs e)
@@ -110,6 +110,11 @@ namespace Vinylist
         }//media player
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
