@@ -22,5 +22,35 @@
         <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click"/>
         <TextBlock x:Name="wantlistlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="Wantlist" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
 
+        <!-- ============= WANTLIST LIST ==================
+        <ListView x:Name="WantlistList" Grid.Column="2" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Artist}"></TextBlock>
+                            <TextBlock Text="{Binding Album}"></TextBlock>
+                            <TextBlock Text="{Binding Year}"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        ============================================== -->
+
+        <StackPanel Grid.Column="2" Grid.Row="2">
+            <RelativePanel>
+                <TextBox x:Name="Artist" Width="120"/>
+                <TextBox x:Name="Album" Width="120" Margin="127,0,-127,0"/>
+                <Button Click="AddData" Content="Add" Margin="252,0,-252,0"/>
+            </RelativePanel>
+            <ListView x:Name="Output">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Page>

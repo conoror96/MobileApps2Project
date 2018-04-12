@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Vinylist
@@ -25,6 +26,9 @@ namespace Vinylist
         public MainPage()
         {
             this.InitializeComponent();
+
+
+            
         }
 
         // Hamburger Menu
@@ -33,7 +37,7 @@ namespace Vinylist
             Hb_menu.IsPaneOpen = true;
         }
 
-        //Navigation Collection
+        //Navigation Collection from main page
         private void collectionButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Pages.collection), collectionTextbox.Text);
@@ -44,7 +48,7 @@ namespace Vinylist
 
         }
 
-        //navigation wantlist
+        //navigation wantlist from main page
 
         private void wantlistButton_Click(object sender, RoutedEventArgs e)
         {
@@ -65,7 +69,7 @@ namespace Vinylist
         //from hamburger to wantlist button
         private void menu2btn_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.wantlist), collectionTextbox.Text);
+            this.Frame.Navigate(typeof(Pages.wantlist), wantlistTextbox.Text);
         }
 
         //from hamburger to about button
@@ -79,5 +83,7 @@ namespace Vinylist
         {
             this.Frame.Navigate(typeof(Pages.contact));
         }
+
+      
     }
 }

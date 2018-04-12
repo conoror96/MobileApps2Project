@@ -20,5 +20,22 @@
 
         <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click"/>
         <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+
+        <!-- ============= COlLECTION LIST ================== 
+        <ListView x:Name="CollectionList" Grid.Column="2" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Artist}"></TextBlock>
+                            <TextBlock Text="{Binding Album}"></TextBlock>
+                            <TextBlock Text="{Binding Year}"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+       ============================================== -->
+
     </Grid>
 </Page>
