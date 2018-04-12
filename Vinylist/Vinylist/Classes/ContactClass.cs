@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Vinylist
 {
-    class CollectionClass
+    class ContactClass
     {
 
-        public string Artist { get; set; }
+        public string Website { get; set; }
 
-        public string Album { get; set; }
+        public string Handle { get; set; }
 
-        public string Year { get; set; }
 
 
     }

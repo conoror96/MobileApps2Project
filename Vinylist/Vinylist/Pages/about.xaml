@@ -21,8 +21,8 @@
         <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click"/>
         <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
 
-        <!-- ============= COlLECTION LIST ================== 
-        <ListView x:Name="CollectionList" Grid.Column="2" Grid.Row="2">
+        <!-- ============= COlLECTION LIST ================== -->
+        <ListView x:Name="AboutList" Grid.Column="2" Grid.Row="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -35,7 +35,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-       ============================================== -->
+      <!-- ============================================== -->
 
     </Grid>
 </Page>

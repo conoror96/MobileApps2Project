@@ -20,5 +20,26 @@
 
         <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click"/>
         <TextBlock x:Name="contactlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="Contact" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+
+        <!-- ============= CONTACT LIST ================== -->
+        <ListView x:Name="ContactList" Grid.Column="2" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Artist}"></TextBlock>
+                            <TextBlock Text="{Binding Album}"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!-- ======================CONTRACT SHARING=========================  -->
+        <StackPanel Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBox x:Name="shareBox" Header="Share Some Feedback!"/>
+            <Button x:Name="postbtnShare" Content="Share" Click="postbtnShare_Click"/>
+        </StackPanel>
+        <!-- ==============================================================  -->
+
     </Grid>
 </Page>

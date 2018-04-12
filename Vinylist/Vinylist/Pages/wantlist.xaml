@@ -42,12 +42,16 @@
             <RelativePanel>
                 <TextBox x:Name="Artist" Width="120"/>
                 <TextBox x:Name="Album" Width="120" Margin="127,0,-127,0"/>
-                <Button Click="AddData" Content="Add" Margin="252,0,-252,0"/>
+                <Button Click="AddDataWantlist" Content="Add" Margin="252,0,-252,0"/>
             </RelativePanel>
             <ListView x:Name="Output">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}"/>
+                        <StackPanel Orientation="Vertical">
+                            <Grid>
+                                <TextBlock Text="{Binding}"/>
+                            </Grid>
+                        </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

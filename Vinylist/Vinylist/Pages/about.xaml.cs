@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -27,13 +28,13 @@ namespace Vinylist.Pages
             this.InitializeComponent();
 
             // ============= LIST FOR ITEMS IN COLLECTION =========================
-            /*ObservableCollection<CollectionClass> dataList = new ObservableCollection<CollectionClass>();
+            ObservableCollection<AboutClass> dataList = new ObservableCollection<AboutClass>();
 
-            CollectionClass c1 = new CollectionClass() { Artist = "Danny Brown", Album = "XXX", Year = "2012" };
+            AboutClass c1 = new AboutClass() { Artist = "Danny Brown", Album = "XXX", Year = "2012" };
 
-            CollectionClass c2 = new CollectionClass() { Artist = "Kendrick Lamar", Album = "DAMN.", Year = "2017" };
+            AboutClass c2 = new AboutClass() { Artist = "Kendrick Lamar", Album = "DAMN.", Year = "2017" };
 
-            CollectionClass c3 = new CollectionClass() { Artist = "Gorillaz", Album = "Demon Days", Year = "2006" };
+            AboutClass c3 = new AboutClass() { Artist = "Gorillaz", Album = "Demon Days", Year = "2006" };
 
             dataList.Add(c1);
 
@@ -41,7 +42,7 @@ namespace Vinylist.Pages
 
             dataList.Add(c3);
 
-            CollectionList.ItemsSource = dataList;*/
+            AboutList.ItemsSource = dataList;
             // ====================================================================
 
         }

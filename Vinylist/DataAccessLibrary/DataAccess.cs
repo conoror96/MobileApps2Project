@@ -7,10 +7,10 @@ namespace DataAccessLibrary
     public static class DataAccess
     {
 
-        public static void InitializeDatabase()
+        public static void InitializeWantlistDatabase()
         {
             using (SqliteConnection db =
-                new SqliteConnection("Filename=sqliteSample2.db"))
+                new SqliteConnection("Filename=wantlistTest.db"))
             {
                 db.Open();
 
@@ -25,10 +25,10 @@ namespace DataAccessLibrary
 
         }
 
-        public static void AddData(string inputText)
+        public static void AddDataWantlist(string inputText)
         {
             using (SqliteConnection db =
-                new SqliteConnection("Filename=sqliteSample2.db"))
+                new SqliteConnection("Filename=wantlistTest.db"))
             {
                 db.Open();
 
@@ -47,12 +47,12 @@ namespace DataAccessLibrary
         }
 
 
-        public static List<String> GetData()
+        public static List<String> GetDataWantlist()
         {
             List<String> entries = new List<string>();
 
             using (SqliteConnection db =
-                new SqliteConnection("Filename=sqliteSample2.db"))
+                new SqliteConnection("Filename=wantlistTest.db"))
             {
                 db.Open();
 

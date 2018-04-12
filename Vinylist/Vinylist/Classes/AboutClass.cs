@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vinylist
 {
-    class WantlistClass
+    class AboutClass
     {
 
         public string Artist { get; set; }

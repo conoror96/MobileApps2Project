@@ -32,12 +32,12 @@ namespace Vinylist.Pages
 
 
         // ========================ADD DATA==================================
-        private void AddData(object sender, RoutedEventArgs e)
+        private void AddDataWantlist(object sender, RoutedEventArgs e)
         {
-            DataAccess.AddData(Artist.Text);
-            DataAccess.AddData(Album.Text);
+            DataAccess.AddDataWantlist("ARTIST:   " + Artist.Text);
+            DataAccess.AddDataWantlist("ALBUM:    " + Album.Text);
 
-            Output.ItemsSource = DataAccess.GetData();
+            Output.ItemsSource = DataAccess.GetDataWantlist();
         }
         // ===================END OF ADD DATA==================================
 
