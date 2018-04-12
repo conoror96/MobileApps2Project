@@ -64,11 +64,14 @@
             </RelativePanel>
         </StackPanel>
 
-        <!-- ========================================================= 
+        <!-- ========================MEDIA PLAYER================================= -->
+        <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <RelativePanel>
+                <Button  x:Name="PlayButton"  Click="Play" Content="Play"/>
+            </RelativePanel>
+        </StackPanel>
 
-     
-
-         ========================================================== -->
+    
 
 
     </Grid>
