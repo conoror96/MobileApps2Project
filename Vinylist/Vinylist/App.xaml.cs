@@ -35,6 +35,7 @@ namespace Vinylist
             this.Suspending += OnSuspending;
 
             DataAccess.InitializeWantlistDatabase();
+            DataAccess.InitializeCollectionDatabase();
 
         }
 

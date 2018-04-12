@@ -7,28 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="DarkSlateGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="55*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="679*"/>
         </Grid.RowDefinitions>
 
 
-
-        <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click"/>
-        <TextBlock x:Name="wantlistlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="Wantlist" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+        <!-- ===========BACK BUTTON================ -->
+        <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click" Grid.ColumnSpan="2" Height="60" Margin="100,16,300,13"/>
+        <TextBlock x:Name="wantlistlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="Wantlist" Foreground="White" FontWeight="Bold" FontSize="40" Opacity=".5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="67" Margin="104,13,104,9" Width="163"/>
 
         <!-- ============= WANTLIST DATABASE SQLite ================== -->
-
-        <StackPanel Grid.Column="2" Grid.Row="2" >
+        <StackPanel Grid.Column="1" Grid.Row="1" >
             <RelativePanel>
-                <TextBox x:Name="Artist" Width="120"/>
-                <TextBox x:Name="Album" Width="120" Margin="127,0,-127,0"/>
-                <Button Click="AddDataWantlist" Content="Add" Margin="252,0,-252,0"/>
+                <TextBox x:Name="Artist" Width="150" PlaceholderText="Artist" PlaceholderForeground="White" Foreground="White" FontSize="20" BorderThickness="3" BorderBrush="Black" Opacity=".7" />
+                <TextBox x:Name="Album" Width="150" Margin="160,0,-127,0" PlaceholderText="Album" PlaceholderForeground="White" Foreground="White" FontSize="20" BorderThickness="3" BorderBrush="Black" Opacity=".7"/>
+                <Button Click="AddDataWantlist" Content="Add" Margin="320,0,-252,0" Foreground="White" Opacity=".7"/>
             </RelativePanel>
             <ListView x:Name="Output" Height="500">
                 <ListView.ItemTemplate>

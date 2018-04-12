@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLibrary;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -29,10 +30,22 @@ namespace Vinylist.Pages
 
         }
 
-       /* protected override void OnNavigatedTo(NavigationEventArgs e)
+        // ========================ADD DATA==================================
+        private void AddDataCollection(object sender, RoutedEventArgs e)
         {
-            collectionlabel.Text = e.Parameter.ToString() + "Added to Collection!";
-        } */
+            DataAccess.AddDataCollection("=========================");
+            DataAccess.AddDataCollection("ARTIST:   " + Artist.Text);
+            DataAccess.AddDataCollection("ALBUM:    " + Album.Text);
+
+            Output.ItemsSource = DataAccess.GetDataCollection();
+        }
+        // ===================END OF ADD DATA==================================
+
+
+        /* protected override void OnNavigatedTo(NavigationEventArgs e)
+         {
+             collectionlabel.Text = e.Parameter.ToString() + "Added to Collection!";
+         } */
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
