@@ -7,35 +7,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="DarkSlateGray">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="55*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="545*"/>
+            <RowDefinition Height="138*"/>
         </Grid.RowDefinitions>
 
-        <AppBarButton Icon="Back" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click"/>
-        <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+        <AppBarButton Icon="Back" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click" Grid.ColumnSpan="2" Margin="-3,13,367,12"/>
+        <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" Foreground="White" FontWeight="Bold" FontSize="40" Opacity=".5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="67" Margin="104,11,104,7" Width="163"/>
 
-        <!-- ============= COlLECTION LIST ================== -->
-        <ListView x:Name="AboutList" Grid.Column="2" Grid.Row="2">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Artist}"></TextBlock>
-                            <TextBlock Text="{Binding Album}"></TextBlock>
-                            <TextBlock Text="{Binding Year}"></TextBlock>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-      <!-- ============================================== -->
-
+        <TextBlock Name="tbMultiLine" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" FontSize="25" Grid.RowSpan="2" Foreground="White"
+                   Opacity=".7">
+           This app is perfect for vinyl enthusiasts who wish to keep track of all their records in their collection and
+           all the records they wish to buy in the apps Collection and Wantlist dedicated databases! <LineBreak />
+           <LineBreak />View the Contact page to find social media links of the app and please, write a review of the app
+            and share it on social media or the Windows App Store!
+            <LineBreak /><LineBreak />
+            Click the 3 buttons below to play the app creator's curated songs!
+        </TextBlock>
+        
+        
+        
     </Grid>
 </Page>
