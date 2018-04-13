@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.Playback;
+using Windows.Media.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,27 +25,14 @@ namespace Vinylist.Pages
     /// </summary>
     public sealed partial class about : Page
     {
+        MediaPlayer player;
+        bool playing;
         public about()
         {
             this.InitializeComponent();
 
-            // ============= LIST FOR ITEMS IN COLLECTION =========================
-            ObservableCollection<AboutClass> dataList = new ObservableCollection<AboutClass>();
-
-            AboutClass c1 = new AboutClass() { Artist = "Danny Brown", Album = "XXX", Year = "2012" };
-
-            AboutClass c2 = new AboutClass() { Artist = "Kendrick Lamar", Album = "DAMN.", Year = "2017" };
-
-            AboutClass c3 = new AboutClass() { Artist = "Gorillaz", Album = "Demon Days", Year = "2006" };
-
-            dataList.Add(c1);
-
-            dataList.Add(c2);
-
-            dataList.Add(c3);
-
-            AboutList.ItemsSource = dataList;
-            // ====================================================================
+            player = new MediaPlayer();
+            playing = false;
 
         }
 
@@ -51,5 +40,26 @@ namespace Vinylist.Pages
         {
             this.Frame.GoBack();
         }
+
+        //MEDIA PLAYER
+        private async void Play(object sender, RoutedEventArgs e)
+        {
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("naturalblues.mp3");
+
+            player.AutoPlay = false;
+            player.Source = MediaSource.CreateFromStorageFile(file);
+
+            if (playing)
+            {
+                player.Source = null;
+            }
+            else
+            {
+                player.Play();
+                playing = true;
+            }
+        }
+
     }
 }

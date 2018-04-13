@@ -8,19 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="DarkSlateGray">
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="55*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="85*"/>
-            <RowDefinition Height="545*"/>
-            <RowDefinition Height="138*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="576*"/>
+            <RowDefinition Height="103*"/>
         </Grid.RowDefinitions>
 
-        <AppBarButton Icon="Back" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click" Grid.ColumnSpan="2" Margin="-3,13,367,12"/>
-        <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" Foreground="White" FontWeight="Bold" FontSize="40" Opacity=".5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="67" Margin="104,11,104,7" Width="163"/>
+        <AppBarButton Icon="Back" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click" Grid.ColumnSpan="2" Margin="-150,16,55,13" Height="60"/>
+        <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" Foreground="White" FontWeight="Bold" FontSize="40" Opacity=".5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="67" Margin="105,14,103,8" Width="163"/>
 
         <TextBlock Name="tbMultiLine" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" FontSize="25" Grid.RowSpan="2" Foreground="White"
                    Opacity=".7">
@@ -29,10 +28,14 @@
            <LineBreak />View the Contact page to find social media links of the app and please, write a review of the app
             and share it on social media or the Windows App Store!
             <LineBreak /><LineBreak />
-            Click the 3 buttons below to play the app creator's curated songs!
+            Click the 3 buttons below to play the curated mystery songs that will change every week!
         </TextBlock>
-        
-        
-        
+        <!-- ========================MEDIA PLAYER================================= -->
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,30,0,23" Grid.RowSpan="2" >
+            <RelativePanel>
+                <Button  x:Name="PlayButton" Foreground="White" Width="400" Opacity=".5" Click="Play" Content="Click to Play the Song of the Week!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </RelativePanel>
+        </StackPanel>
+
     </Grid>
 </Page>
