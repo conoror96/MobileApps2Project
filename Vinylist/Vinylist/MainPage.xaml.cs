@@ -36,35 +36,6 @@ namespace Vinylist
             
         }
 
-        // Hamburger Menu
-      /*  private void HamburgerButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hb_menu.IsPaneOpen = true;
-        } */
-
-        //Navigation Collection from main page
-      /*  private void collectionButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.collection), collectionTextbox.Text);
-        }
-
-        private void collectionTextbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        //navigation wantlist from main page
-
-        private void wantlistButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.wantlist), wantlistTextbox.Text);
-        }
-
-        private void wantlistTextbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        } */
-
         //from hamburger to collection button
         private void menu1btn_Click(object sender, RoutedEventArgs e)
         {

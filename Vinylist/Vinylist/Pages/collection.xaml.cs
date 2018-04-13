@@ -41,12 +41,6 @@ namespace Vinylist.Pages
         }
         // ===================END OF ADD DATA==================================
 
-
-        /* protected override void OnNavigatedTo(NavigationEventArgs e)
-         {
-             collectionlabel.Text = e.Parameter.ToString() + "Added to Collection!";
-         } */
-
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();

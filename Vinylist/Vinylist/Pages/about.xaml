@@ -18,6 +18,7 @@
             <RowDefinition Height="103*"/>
         </Grid.RowDefinitions>
 
+        <!-- ==========HEADER AND BACK BUTTON============= -->
         <AppBarButton Icon="Back" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center" x:Name="backButton" Click="backButton_Click" Grid.ColumnSpan="2" Margin="-150,16,55,13" Height="60"/>
         <TextBlock x:Name="aboutlabel" Style="{ThemeResource HeaderTextBlockStyle}" Text="About" Foreground="White" FontWeight="Bold" FontSize="40" Opacity=".5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Height="67" Margin="105,14,103,8" Width="163"/>
 
@@ -28,7 +29,7 @@
            <LineBreak />View the Contact page to find social media links of the app and please, write a review of the app
             and share it on social media or the Windows App Store!
             <LineBreak /><LineBreak />
-            Click the 3 buttons below to play the curated mystery songs that will change every week!
+            Click the the button below to play the curated mystery song of the week!
         </TextBlock>
         <!-- ========================MEDIA PLAYER================================= -->
         <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,30,0,23" Grid.RowSpan="2" >

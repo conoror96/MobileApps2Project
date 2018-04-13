@@ -29,6 +29,7 @@
                 <TextBox x:Name="Album" Width="150" Margin="160,0,-127,0" PlaceholderText="Album" PlaceholderForeground="White" Foreground="White" FontSize="20" BorderThickness="3" BorderBrush="Black" Opacity=".7"/>
                 <Button Click="AddDataWantlist" Content="Add" Margin="320,0,-252,0" Foreground="White" Opacity=".7"/>
             </RelativePanel>
+            <!-- ==========DISPLAY DATABASE=========== -->
             <ListView x:Name="Output" Height="500">
                 <ListView.ItemTemplate>
                     <DataTemplate>

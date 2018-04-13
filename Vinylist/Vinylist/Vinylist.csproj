@@ -121,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\naturalblues.mp3" />
-    <Content Include="Assets\overandover.mp3" />
     <Content Include="Assets\background1.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

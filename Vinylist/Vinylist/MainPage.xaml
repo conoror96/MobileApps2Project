@@ -24,66 +24,12 @@
             <TextBlock Text="Vinylist" FontSize="60" Foreground="White" Opacity=".5" SelectionChanged="TextBlock_SelectionChanged" />
         </StackPanel>
 
+        <!-- =============== TILES FOR PAGE NAVIGATION================= -->
         <Button Content="Collection" Grid.Column="0" Grid.Row="1"  x:Name="menu1btn" Click="menu1btn_Click" BorderThickness="10" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkTurquoise" Foreground="White" FontSize="25" Height="170" Width="150" Opacity=".5"/>
         <Button Content="Wantlist"  Grid.Column="1" Grid.Row="1"  x:Name="menu2btn" Click="menu2btn_Click"  BorderThickness="10" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkTurquoise" Foreground="White" FontSize="25" Height="170" Width="150" Opacity=".5"/>
         <Button Content="About"  Grid.Column="0" Grid.Row="2"  x:Name="menu3btn" Click="menu3btn_Click"  BorderThickness="10" BorderBrush="Black"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkTurquoise" Foreground="White" FontSize="25" Height="170" Width="150" Opacity=".5"/>
         <Button Content="Contact"  Grid.Column="1" Grid.Row="2"  x:Name="menu4btn" Click="menu4btn_Click"  BorderThickness="10" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkTurquoise" Foreground="White" FontSize="25" Height="170" Width="150" Opacity=".5"/>
     
-
-        <!-- ============    HAMBURGER MENU         =============
-        <SplitView x:Name="Hb_menu"  IsPaneOpen="False" Background="Turquoise" DisplayMode="CompactOverlay" CompactPaneLength="50" OpenPaneLength="250" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <SplitView.Pane>
-                <StackPanel Background="DarkOliveGreen">
-
-                    
-                    
-                    <Button x:Name="HamburgerButton" Opacity="0.5" FontSize="30" FontFamily="Segoe MDL2 Assets" Content="" Click="HamburgerButton_Click" Background="{x:Null}"/>
-                    <StackPanel Orientation="Horizontal">
-                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu1btn" Click="menu1btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
-                        <TextBlock Text="Collection" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu2btn" Click="menu2btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
-                        <TextBlock Text="Wantlist" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu3btn" Click="menu3btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
-                        <TextBlock Text="About" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button FontSize="20" Margin="5,0,0,0" x:Name="menu4btn" Click="menu4btn_Click" FontFamily="Segoe MDL2 Assets" Content=""/>
-                        <TextBlock Text="Contact" Margin="5,0,0,0" FontSize="18" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </StackPanel>
-            </SplitView.Pane>
-        </SplitView> -->
-
-
-      
-        <!-- ===================   ADD TO COLLECTION            ============================
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
-            <RelativePanel>
-                <TextBox x:Name="collectionTextbox" PlaceholderText="Add To Collection..." TextChanged="collectionTextbox_TextChanged"/>
-                <Button  x:Name="collectionButton"  Click="collectionButton_Click" Content="Add" RelativePanel.RightOf="collectionTextbox"/>
-            </RelativePanel>
-        </StackPanel>
-
-             ===================   ADD TO WANTLIST            ============================ 
-
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Margin="0,50,0,0">
-            <RelativePanel>
-                <TextBox x:Name="wantlistTextbox" PlaceholderText="Add To Wantlist..." TextChanged="wantlistTextbox_TextChanged"/>
-                <Button  x:Name="wantlistButton"  Click="wantlistButton_Click" Content="Add" RelativePanel.RightOf="wantlistTextbox"/>
-            </RelativePanel>
-        </StackPanel> -->
-
-        <!-- ========================MEDIA PLAYER================================= 
-        <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <RelativePanel>
-                <Button  x:Name="PlayButton"  Click="Play" Content="Play"/>
-            </RelativePanel>
-        </StackPanel>-->
-
 
     </Grid>
 </Page>

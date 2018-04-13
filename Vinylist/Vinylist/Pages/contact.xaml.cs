@@ -47,7 +47,6 @@ namespace Vinylist.Pages
             dataList.Add(c3);
 
             ContactList.ItemsSource = dataList;
-            // ====================================================================
 
         }
 
@@ -73,14 +72,13 @@ namespace Vinylist.Pages
             dataTransferManager.DataRequested -= DataTransferManager_DataRequested;
         }
 
-
         private void postbtnShare_Click(object sender, RoutedEventArgs e)
         {
             DataTransferManager.ShowShareUI();
         }
 
-        // ================================================================
 
+        // ===================BACK BUTTON============================
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();

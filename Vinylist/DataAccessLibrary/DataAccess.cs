@@ -10,7 +10,7 @@ namespace DataAccessLibrary
         public static void InitializeWantlistDatabase()
         {
             using (SqliteConnection db =
-                new SqliteConnection("Filename=wantlistTest.db"))
+                new SqliteConnection("Filename=wantlistDatabase.db"))
             {
                 db.Open();
 
@@ -28,7 +28,7 @@ namespace DataAccessLibrary
         public static void AddDataWantlist(string inputText)
         {
             using (SqliteConnection db =
-                new SqliteConnection("Filename=wantlistTest.db"))
+                new SqliteConnection("Filename=wantlistDatabase.db"))
             {
                 db.Open();
 
@@ -52,7 +52,7 @@ namespace DataAccessLibrary
             List<String> entries = new List<string>();
 
             using (SqliteConnection db =
-                new SqliteConnection("Filename=wantlistTest.db"))
+                new SqliteConnection("Filename=wantlistDatabase.db"))
             {
                 db.Open();
 
@@ -76,7 +76,7 @@ namespace DataAccessLibrary
         public static void InitializeCollectionDatabase()
         {
             using (SqliteConnection db =
-                new SqliteConnection("Filename=collectionTest.db"))
+                new SqliteConnection("Filename=collectionDatabase.db"))
             {
                 db.Open();
 
@@ -94,7 +94,7 @@ namespace DataAccessLibrary
         public static void AddDataCollection(string inputText)
         {
             using (SqliteConnection db =
-                new SqliteConnection("Filename=collectionTest.db"))
+                new SqliteConnection("Filename=collectionDatabase.db"))
             {
                 db.Open();
 
@@ -118,7 +118,7 @@ namespace DataAccessLibrary
             List<String> entries = new List<string>();
 
             using (SqliteConnection db =
-                new SqliteConnection("Filename=collectionTest.db"))
+                new SqliteConnection("Filename=collectionDatabase.db"))
             {
                 db.Open();
 
